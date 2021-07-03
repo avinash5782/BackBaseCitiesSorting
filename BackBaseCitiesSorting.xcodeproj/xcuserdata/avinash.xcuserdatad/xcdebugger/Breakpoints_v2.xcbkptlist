@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "939EC4D7-D879-4D6D-B7C9-540B05A37513"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A9EC484-EFAF-41C5-A800-644C0E1C89E3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BackBaseCitiesSorting/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "obsrableData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1A9EC484-EFAF-41C5-A800-644C0E1C89E3 - 48526a422dde6016"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BackBaseCitiesSorting.ViewController.obsrableData() -&gt; ()"
+                  moduleName = "BackBaseCitiesSorting"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/avinash/Desktop/BackBaseCitiesSorting/BackBaseCitiesSorting/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "336">
+               </Location>
+               <Location
+                  uuid = "1A9EC484-EFAF-41C5-A800-644C0E1C89E3 - 7d2b0911fa7b9f21"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Swift.Error&gt;) -&gt; () in BackBaseCitiesSorting.ViewController.obsrableData() -&gt; ()"
+                  moduleName = "BackBaseCitiesSorting"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/avinash/Desktop/BackBaseCitiesSorting/BackBaseCitiesSorting/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "49">
+               </Location>
+               <Location
+                  uuid = "1A9EC484-EFAF-41C5-A800-644C0E1C89E3 - 90b61a6c7468b697"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Array&lt;BackBaseCitiesSorting.CityData&gt;) -&gt; () in BackBaseCitiesSorting.ViewController.obsrableData() -&gt; ()"
+                  moduleName = "BackBaseCitiesSorting"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/avinash/Desktop/BackBaseCitiesSorting/BackBaseCitiesSorting/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "189">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
