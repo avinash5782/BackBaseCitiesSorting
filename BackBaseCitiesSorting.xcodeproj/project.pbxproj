@@ -18,6 +18,7 @@
 		E198C92C2690734B00EAF229 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E198C92B2690734B00EAF229 /* ViewModel.swift */; };
 		E198C92E2690756B00EAF229 /* CityDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E198C92D2690756B00EAF229 /* CityDataModel.swift */; };
 		E198C9302690778900EAF229 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = E198C92F2690778900EAF229 /* cities.json */; };
+		E198C9322690A40E00EAF229 /* ShowMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E198C9312690A40E00EAF229 /* ShowMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		E198C92B2690734B00EAF229 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		E198C92D2690756B00EAF229 /* CityDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDataModel.swift; sourceTree = "<group>"; };
 		E198C92F2690778900EAF229 /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
+		E198C9312690A40E00EAF229 /* ShowMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				E198C92F2690778900EAF229 /* cities.json */,
 				E198C9092690729000EAF229 /* Info.plist */,
 				E198C92B2690734B00EAF229 /* ViewModel.swift */,
+				E198C9312690A40E00EAF229 /* ShowMapView.swift */,
 			);
 			path = BackBaseCitiesSorting;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			files = (
 				E198C9002690728300EAF229 /* ViewController.swift in Sources */,
 				E198C8FC2690728300EAF229 /* AppDelegate.swift in Sources */,
+				E198C9322690A40E00EAF229 /* ShowMapView.swift in Sources */,
 				E198C92C2690734B00EAF229 /* ViewModel.swift in Sources */,
 				E198C8FE2690728300EAF229 /* SceneDelegate.swift in Sources */,
 				E198C92E2690756B00EAF229 /* CityDataModel.swift in Sources */,

@@ -14,57 +14,74 @@
             filePath = "BackBaseCitiesSorting/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "obsrableData()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "1A9EC484-EFAF-41C5-A800-644C0E1C89E3 - 48526a422dde6016"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BackBaseCitiesSorting.ViewController.obsrableData() -&gt; ()"
-                  moduleName = "BackBaseCitiesSorting"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/avinash/Desktop/BackBaseCitiesSorting/BackBaseCitiesSorting/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64"
-                  offsetFromSymbolStart = "336">
-               </Location>
-               <Location
-                  uuid = "1A9EC484-EFAF-41C5-A800-644C0E1C89E3 - 7d2b0911fa7b9f21"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Swift.Error&gt;) -&gt; () in BackBaseCitiesSorting.ViewController.obsrableData() -&gt; ()"
-                  moduleName = "BackBaseCitiesSorting"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/avinash/Desktop/BackBaseCitiesSorting/BackBaseCitiesSorting/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64"
-                  offsetFromSymbolStart = "49">
-               </Location>
-               <Location
-                  uuid = "1A9EC484-EFAF-41C5-A800-644C0E1C89E3 - 90b61a6c7468b697"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Array&lt;BackBaseCitiesSorting.CityData&gt;) -&gt; () in BackBaseCitiesSorting.ViewController.obsrableData() -&gt; ()"
-                  moduleName = "BackBaseCitiesSorting"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/avinash/Desktop/BackBaseCitiesSorting/BackBaseCitiesSorting/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65"
-                  offsetFromSymbolStart = "189">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "69FF9A69-99E6-4176-8B29-362D73049FBF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BackBaseCitiesSorting/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "searchBar(_:textDidChange:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "777A0558-3895-4511-ADD5-076A1CFAA18F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BackBaseCitiesSorting/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "searchBarTextDidBeginEditing(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7E3B9877-4279-40D7-9634-BDC4544AB4F0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BackBaseCitiesSorting/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "searchBarTextDidEndEditing(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "55564520-2084-4C4A-B1B3-253DEA043C89"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BackBaseCitiesSorting/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "searchBar(_:textDidChange:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

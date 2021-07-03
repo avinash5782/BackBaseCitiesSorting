@@ -6,8 +6,6 @@
 //
 
 import UIKit
-
-import UIKit
 import Combine
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -17,13 +15,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var mytableView: UITableView!
     var subscriber :AnyCancellable?
     var isSearch : Bool = false
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.mytableView = UITableView()
-        self.mytableView.register(UITableViewCell.self, forCellReuseIdentifier: "TestCell")
-        self.mytableView.delegate = self
-        self.mytableView.dataSource = self
-        
+    var activityIndicatorView: UIActivityIndicatorView?
+    fileprivate func SetupViews() {
+        // adding the the search bar
         
         let searchBar:UISearchBar = UISearchBar()
         searchBar.searchBarStyle = UISearchBar.Style.prominent
@@ -34,7 +28,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         searchBar.delegate = self
         self.view.addSubview(searchBar)
         self.view.addSubview(self.mytableView)
-        
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         searchBar.topAnchor.constraint(equalTo: self.view.topAnchor , constant:  50).isActive = true
         searchBar.heightAnchor.constraint(equalToConstant: 50).isActive = true
@@ -46,13 +39,33 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.mytableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor , constant:  -20).isActive = true
         self.mytableView.leftAnchor.constraint(equalTo: self.view.leftAnchor ).isActive = true
         self.mytableView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
+        activityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        activityIndicatorView?.style = UIActivityIndicatorView.Style.large
+        activityIndicatorView?.color = .red
+        activityIndicatorView?.center = self.view.center
+        self.view.addSubview(activityIndicatorView ?? UIView())
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.mytableView = UITableView()
+        self.mytableView.register(UITableViewCell.self, forCellReuseIdentifier: "TestCell")
+        self.mytableView.delegate = self
+        self.mytableView.dataSource = self
+        self.mytableView.keyboardDismissMode = .onDrag
+        SetupViews()
         setupViewMOdel()
+    }
+    override func viewWillAppear(_ animated: Bool) {
     }
     
     func setupViewMOdel() {
         viewModel = ViewModel()
         obsrableData()
-        fetchData()
+        self.activityIndicatorView?.startAnimating()
+        DispatchQueue.global(qos: .default).async {
+            self.fetchData()
+        }
     }
     func fetchData() {
         viewModel.fetdata()
@@ -66,6 +79,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }) { (data) in
             self.cityDetails = data.sorted {$0.name < $1.name}
             DispatchQueue.main.async {
+                self.activityIndicatorView?.stopAnimating()
                 self.mytableView.reloadData()
             }
         }
@@ -74,26 +88,44 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "TestCell")
         var userdata: CityData!
         if isSearch {
-            userdata = filteredCityDetails[indexPath.item]
+           userdata = filteredCityDetails[indexPath.item]
         } else {
             userdata = cityDetails[indexPath.item]
         }
         cell.textLabel?.text = userdata.name + ", " + userdata.country
         cell.detailTextLabel?.text = String ( userdata.coord.lat) + ", " + String(userdata.coord.lon)
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cityDetails.count
+        if isSearch {
+            return filteredCityDetails.count
+        }else{
+            return cityDetails.count
+        }
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var userdata: CityData!
+        if isSearch {
+           userdata = filteredCityDetails[indexPath.item]
+        } else {
+            userdata = cityDetails[indexPath.item]
+        }
+        let mapView = ShowMapView(citiData: userdata)
+        let navigationVC = UINavigationController(rootViewController: mapView)
+        navigationVC.modalPresentationStyle = .fullScreen
+        navigationVC.showDetailViewController(mapView, sender: self)
+        self.present(navigationVC, animated: true, completion: nil)
     }
 }
 extension ViewController: UISearchBarDelegate {
     //MARK: UISearchbar delegate
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        isSearch = true
+        isSearch = false
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
@@ -115,17 +147,16 @@ extension ViewController: UISearchBarDelegate {
             isSearch = false
             self.mytableView.reloadData()
         } else {
-            filteredCityDetails = cityDetails.filter({ (text) -> Bool in
-                let tmp = text
-                let range = tmp.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
-                return range.location != NSNotFound
-            })
-            if(filteredCityDetails.count == 0){
-                isSearch = false
-            } else {
+            
+            // filtering data from both  CityName and Country, if its found anyone of them add in filtered array
+            filteredCityDetails =  cityDetails.filter { $0.name.range(of: searchText, options: .caseInsensitive) != nil || $0.country.range(of: searchText, options: .caseInsensitive) != nil
+            }
+            if(filteredCityDetails.count == 0) {
                 isSearch = true
             }
-            self.mytableView.reloadData()
+            DispatchQueue.main.async {
+                self.mytableView.reloadData()
+            }
         }
     }
     
