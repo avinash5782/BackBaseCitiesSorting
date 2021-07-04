@@ -42,7 +42,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.mytableView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
         activityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         activityIndicatorView?.style = UIActivityIndicatorView.Style.large
-        activityIndicatorView?.color = .red
+        activityIndicatorView?.color = .gray
         activityIndicatorView?.center = self.view.center
         self.view.addSubview(activityIndicatorView ?? UIView())
     }
