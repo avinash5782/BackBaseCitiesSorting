@@ -15,11 +15,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var mytableView: UITableView!
     var subscriber :AnyCancellable?
     var isSearch : Bool = false
+    var searchBar: UISearchBar!
     var activityIndicatorView: UIActivityIndicatorView?
     fileprivate func SetupViews() {
         // adding the the search bar
         
-        let searchBar:UISearchBar = UISearchBar()
+        searchBar = UISearchBar()
         searchBar.searchBarStyle = UISearchBar.Style.prominent
         searchBar.placeholder = " Search..."
         searchBar.sizeToFit()

@@ -9,9 +9,11 @@ import XCTest
 @testable import BackBaseCitiesSorting
 
 class BackBaseCitiesSortingTests: XCTestCase {
-
+    var viewController: ViewController!
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        viewController = ViewController()
+        viewController.viewDidLoad()
     }
 
     override func tearDownWithError() throws {
@@ -28,6 +30,17 @@ class BackBaseCitiesSortingTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
+    }
+    func testtextSearchLogic() {
+        
+        let searchExpectation = expectation(description: "searchExpectation")
+        viewController.fetchData()
+        viewController.searchBar( UISearchBar(), textDidChange: "Syden")
+        XCTAssertEqual(viewController.filteredCityDetails.count, 2)
+        viewController.searchBar( UISearchBar(), textDidChange: "AllahabadIndia")
+        XCTAssertEqual(viewController.filteredCityDetails.count, 0)
+        searchExpectation.fulfill()
+        waitForExpectations(timeout: 5, handler: nil)
     }
 
 }
