@@ -68,7 +68,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     func fetchData() {
-        viewModel.fetdata()
+        viewModel.fetchdata()
     }
     func obsrableData() {
         subscriber =  viewModel.passthroughobj.sink(receiveCompletion: { (value) in

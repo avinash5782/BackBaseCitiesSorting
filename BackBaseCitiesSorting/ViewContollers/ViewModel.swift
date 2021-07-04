@@ -13,7 +13,7 @@ class ViewModel  {
     let passthroughobj = PassthroughSubject<CityDataModel, Error>()
     init() {
     }
-    func fetdata() {
+    func fetchdata() {
         if let path = Bundle.main.path(forResource: "cities", ofType: "json") {
             do {
                 guard let jsonData = try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe) else { return  }
