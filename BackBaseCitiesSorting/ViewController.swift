@@ -89,7 +89,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "TestCell")
         var userdata: CityData!
         if isSearch {
-           userdata = filteredCityDetails[indexPath.item]
+            userdata = filteredCityDetails[indexPath.item]
         } else {
             userdata = cityDetails[indexPath.item]
         }
@@ -112,7 +112,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var userdata: CityData!
         if isSearch {
-           userdata = filteredCityDetails[indexPath.item]
+            userdata = filteredCityDetails[indexPath.item]
         } else {
             userdata = cityDetails[indexPath.item]
         }
