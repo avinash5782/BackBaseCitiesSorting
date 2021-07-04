@@ -57,6 +57,7 @@
 		E198C92D2690756B00EAF229 /* CityDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDataModel.swift; sourceTree = "<group>"; };
 		E198C92F2690778900EAF229 /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
 		E198C9312690A40E00EAF229 /* ShowMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMapView.swift; sourceTree = "<group>"; };
+		E198C9382691899100EAF229 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +113,7 @@
 				E198C9352691757800EAF229 /* ViewContollers */,
 				E198C9342691754300EAF229 /* Delegates */,
 				E198C9092690729000EAF229 /* Info.plist */,
+				E198C9382691899100EAF229 /* README.md */,
 			);
 			path = BackBaseCitiesSorting;
 			sourceTree = "<group>";
