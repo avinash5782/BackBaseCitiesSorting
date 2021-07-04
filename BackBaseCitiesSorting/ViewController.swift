@@ -147,13 +147,10 @@ extension ViewController: UISearchBarDelegate {
             isSearch = false
             self.mytableView.reloadData()
         } else {
-            
             // filtering data from both  CityName and Country, if its found anyone of them add in filtered array
-            filteredCityDetails =  cityDetails.filter { $0.name.range(of: searchText, options: .caseInsensitive) != nil || $0.country.range(of: searchText, options: .caseInsensitive) != nil
+            filteredCityDetails =  cityDetails.filter { $0.name.starts(with: searchText) || $0.country.range(of: searchText, options: .caseInsensitive) != nil
             }
-            if(filteredCityDetails.count == 0) {
-                isSearch = true
-            }
+            isSearch = true
             DispatchQueue.main.async {
                 self.mytableView.reloadData()
             }
