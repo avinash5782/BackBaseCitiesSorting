@@ -26,14 +26,3 @@ class ViewModel  {
     }
     
 }
-//        ApiManager.shared.fetchUser(url: self.url) {[weak self]( result: Result<CityDataModel, Error>) in
-//            switch result {
-//            case .failure(let error):
-//                self?.passthroughobj.send(completion: .failure(error))
-//            case .success(let data):
-//                self?.passthroughobj.send(data)
-//            }
-//        }
-//    }
-//}
-//}

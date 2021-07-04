@@ -42,7 +42,7 @@
 		E198C8F82690728300EAF229 /* BackBaseCitiesSorting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackBaseCitiesSorting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E198C8FB2690728300EAF229 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E198C8FD2690728300EAF229 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E198C8FF2690728300EAF229 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E198C8FF2690728300EAF229 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		E198C9022690728300EAF229 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E198C9042690729000EAF229 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E198C9072690729000EAF229 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -107,17 +107,11 @@
 		E198C8FA2690728300EAF229 /* BackBaseCitiesSorting */ = {
 			isa = PBXGroup;
 			children = (
-				E198C8FB2690728300EAF229 /* AppDelegate.swift */,
-				E198C8FD2690728300EAF229 /* SceneDelegate.swift */,
-				E198C8FF2690728300EAF229 /* ViewController.swift */,
-				E198C92D2690756B00EAF229 /* CityDataModel.swift */,
-				E198C9012690728300EAF229 /* Main.storyboard */,
-				E198C9042690729000EAF229 /* Assets.xcassets */,
-				E198C9062690729000EAF229 /* LaunchScreen.storyboard */,
-				E198C92F2690778900EAF229 /* cities.json */,
+				E198C937269175BF00EAF229 /* Resources */,
+				E198C936269175A600EAF229 /* Models */,
+				E198C9352691757800EAF229 /* ViewContollers */,
+				E198C9342691754300EAF229 /* Delegates */,
 				E198C9092690729000EAF229 /* Info.plist */,
-				E198C92B2690734B00EAF229 /* ViewModel.swift */,
-				E198C9312690A40E00EAF229 /* ShowMapView.swift */,
 			);
 			path = BackBaseCitiesSorting;
 			sourceTree = "<group>";
@@ -138,6 +132,44 @@
 				E198C91F2690729200EAF229 /* Info.plist */,
 			);
 			path = BackBaseCitiesSortingUITests;
+			sourceTree = "<group>";
+		};
+		E198C9342691754300EAF229 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				E198C8FB2690728300EAF229 /* AppDelegate.swift */,
+				E198C8FD2690728300EAF229 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		E198C9352691757800EAF229 /* ViewContollers */ = {
+			isa = PBXGroup;
+			children = (
+				E198C92B2690734B00EAF229 /* ViewModel.swift */,
+				E198C9312690A40E00EAF229 /* ShowMapView.swift */,
+				E198C8FF2690728300EAF229 /* ViewController.swift */,
+			);
+			path = ViewContollers;
+			sourceTree = "<group>";
+		};
+		E198C936269175A600EAF229 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E198C92D2690756B00EAF229 /* CityDataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E198C937269175BF00EAF229 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E198C92F2690778900EAF229 /* cities.json */,
+				E198C9062690729000EAF229 /* LaunchScreen.storyboard */,
+				E198C9042690729000EAF229 /* Assets.xcassets */,
+				E198C9012690728300EAF229 /* Main.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
